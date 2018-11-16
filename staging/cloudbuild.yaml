@@ -48,9 +48,9 @@ steps:
         PROJECT=$$(gcloud config get-value core/project)
         ZONE=$$(gcloud config get-value compute/zone)
       
-        gcloud container clusters get-credentials "$${CLUSTER}" \
-          --project "$${PROJECT}" \
-          --zone "$${ZONE}"
+        gcloud container clusters get-credentials staging \
+          --project gdgdemo-219811 \
+          --zone asia-southeast1-b
     volumes:
       - name: 'kube'
         path: /kube
